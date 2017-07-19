@@ -110,7 +110,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setupActionBar();
+        // setupActionBar();
         // FIXME make header work only on xlarge screens and remove the following two lines
         PreferenceManager.setDefaultValues(this, R.xml.pref_accept_and_end_call, false);
         getFragmentManager().beginTransaction().replace(android.R.id.content, new CallPreferenceFragment()).commit();
