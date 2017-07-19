@@ -8,7 +8,7 @@
 
     <!-- Strings related to Settings -->
     <string name="pref_call_settings_header">Anrufeinstellungen</string>
-    <string name="pref_hang_up_time">Nach .. Minuten auflegen</string>
+    <string name="pref_hang_up_time">Nach .. Minuten auflegen (mm:ss)</string>
     <string name="pref_accept_calls">Anrufe annehmen</string>
 
     <string name="default_hangup_time">50:00</string>
