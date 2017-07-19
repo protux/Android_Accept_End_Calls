@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Call Quitter</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Strings related to Settings -->
+    <string name="pref_call_settings_header">Call Settings</string>
+    <string name="pref_hang_up_time">Hang up after .. minutes</string>
+    <string name="pref_accept_calls">Automatically accept calls</string>
+
+    <string name="default_hangup_time">50:00</string>
+</resources>

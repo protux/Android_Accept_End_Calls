@@ -1,0 +1,14 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <de.nischwan.acceptandendcalls.activities.preferences.TimePreference
+        android:defaultValue="@string/default_hangup_time"
+        android:key="hang_up_time"
+        android:title="@string/pref_hang_up_time" />
+
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="accept_calls"
+        android:title="@string/pref_accept_calls" />
+
+</PreferenceScreen>

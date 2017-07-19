@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Anrufbeender</string>
+    <string name="title_activity_settings">Einstellungen</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Abbrechen</string>
+
+    <!-- Strings related to Settings -->
+    <string name="pref_call_settings_header">Anrufeinstellungen</string>
+    <string name="pref_hang_up_time">Nach .. Minuten auflegen</string>
+    <string name="pref_accept_calls">Anrufe annehmen</string>
+
+    <string name="default_hangup_time">50:00</string>
+</resources>
