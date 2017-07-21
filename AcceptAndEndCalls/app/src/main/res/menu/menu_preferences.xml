@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="de.nischwan.autocallmanager.activities.CallOverviewActivity">
+
+    <item
+        android:id="@+id/menu_quit_app"
+        android:orderInCategory="100"
+        android:title="@string/quit"
+        app:showAsAction="never" />
+</menu>

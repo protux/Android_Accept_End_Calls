@@ -14,6 +14,7 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBar;
+import android.view.Menu;
 import android.view.MenuItem;
 
 import java.util.List;
@@ -114,6 +115,22 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         // FIXME make header work only on xlarge screens and remove the following two lines
         PreferenceManager.setDefaultValues(this, R.xml.pref_accept_and_end_call, false);
         getFragmentManager().beginTransaction().replace(android.R.id.content, new CallPreferenceFragment()).commit();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_preferences, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_quit_app:
+                finish();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     /**

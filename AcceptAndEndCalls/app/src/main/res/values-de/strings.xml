@@ -5,6 +5,7 @@
 
     <string name="ok">OK</string>
     <string name="cancel">Abbrechen</string>
+    <string name="quit">Beenden</string>
 
     <!-- Strings related to Settings -->
     <string name="pref_call_settings_header">Anrufeinstellungen</string>
