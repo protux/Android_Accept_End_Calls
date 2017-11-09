@@ -38,6 +38,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     public static final String HANG_UP_TIME_KEY = "hang_up_time";
     public static final String ACCEPT_CALL_KEY = "accept_calls";
     public static final String DEFAULT_HANGUP_TIME = "50:15";
+    public static final String OFFSET_HANGUP_TIME = "pref_hang_up_offset";
+    public static final String DEFAULT_OFFSET_HANGUP_TIME = "5";
 
     /**
      * A preference value change listener that updates the preference's summary

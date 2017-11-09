@@ -11,6 +11,7 @@
     <string name="pref_call_settings_header">Anrufeinstellungen</string>
     <string name="pref_hang_up_time">Nach .. Minuten auflegen (mm:ss)</string>
     <string name="pref_accept_calls">Anrufe annehmen</string>
+    <string name="pref_hang_up_offset">Max Abweichung beim Auflegen in Minuten</string>
 
     <string name="default_hangup_time">50:15</string>
 </resources>

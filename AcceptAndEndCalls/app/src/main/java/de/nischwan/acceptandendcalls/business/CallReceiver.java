@@ -89,8 +89,12 @@ public class CallReceiver extends PhoneCallStateHandler {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ctx);
         Log.d(LOG_TAG, "Call answered");
         String time = preferences.getString(SettingsActivity.HANG_UP_TIME_KEY, SettingsActivity.DEFAULT_HANGUP_TIME);
-        int duration_in_seconds = DateUtils.timeToSeconds(time);
-        startCallKiller(ctx, duration_in_seconds);
+        int durationInSeconds = DateUtils.timeToSeconds(time);
+        int offsetTime = Integer.parseInt(
+                preferences.getString(SettingsActivity.OFFSET_HANGUP_TIME, SettingsActivity.DEFAULT_OFFSET_HANGUP_TIME)
+        );
+        int offsetInSeconds = DateUtils.calculateTimeOffsetInSeconds(offsetTime);
+        startCallKiller(ctx, durationInSeconds + offsetInSeconds);
     }
 
     @Override

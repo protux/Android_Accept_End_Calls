@@ -11,4 +11,10 @@
         android:key="accept_calls"
         android:title="@string/pref_accept_calls" />
 
+    <EditTextPreference
+        android:defaultValue="5"
+        android:inputType="number"
+        android:key="max_random_offset"
+        android:title="@string/pref_hang_up_offset" />
+
 </PreferenceScreen>

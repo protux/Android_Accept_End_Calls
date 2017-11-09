@@ -1,11 +1,17 @@
 package de.nischwan.acceptandendcalls.utils;
 
+import java.util.Date;
+import java.util.Locale;
+import java.util.Random;
+
 /**
  * Offers some utility methods for handling dates and times.
  *
  * @author Nico Schwanebeck
  */
 public final class DateUtils {
+    private static final String LOG_TAG = DateUtils.class.getName();
+
     private DateUtils() {
         // access restriction
     }
@@ -65,5 +71,17 @@ public final class DateUtils {
         }
 
         throw new IllegalArgumentException("Time must be 'mm:ss'.");
+    }
+
+    /**
+     * @param timeOffset the maximum offset time.
+     * @return +/- the passed time in seconds.
+     */
+    public static int calculateTimeOffsetInSeconds(int timeOffset) {
+        int maxOffsetInSeconds = timeOffset * 60;
+        int offsetInSeconds = new Random().nextInt(maxOffsetInSeconds * 2) - maxOffsetInSeconds;
+        if (Log.isDebugEnabled())
+            Log.d(LOG_TAG, String.format(Locale.getDefault(), "Calculated offset: %d", offsetInSeconds));
+        return offsetInSeconds;
     }
 }
