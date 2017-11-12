@@ -21,7 +21,6 @@ import java.util.List;
 
 import de.nischwan.acceptandendcalls.R;
 import de.nischwan.acceptandendcalls.utils.DateUtils;
-import de.nischwan.acceptandendcalls.utils.NotificationUtils;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On
@@ -39,7 +38,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     public static final String HANG_UP_TIME_KEY = "hang_up_time";
     public static final String ACCEPT_CALL_KEY = "accept_calls";
     public static final String DEFAULT_HANGUP_TIME = "50:15";
-    public static final String OFFSET_HANGUP_TIME = "pref_hang_up_offset";
+    public static final String OFFSET_HANGUP_TIME_KEY = "max_random_offset";
     public static final String DEFAULT_OFFSET_HANGUP_TIME = "5";
 
     /**
@@ -186,7 +185,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             // to their values. When their values change, their summaries are
             // updated to reflect the new value, per the Android Design
             // guidelines.
-            bindPreferenceSummaryToValue(findPreference("hang_up_time"));
+            bindPreferenceSummaryToValue(findPreference(HANG_UP_TIME_KEY));
+            bindPreferenceSummaryToValue(findPreference(OFFSET_HANGUP_TIME_KEY));
         }
 
         @Override

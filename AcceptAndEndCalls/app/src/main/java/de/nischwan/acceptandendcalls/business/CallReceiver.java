@@ -92,7 +92,7 @@ public class CallReceiver extends PhoneCallStateHandler {
         String time = preferences.getString(SettingsActivity.HANG_UP_TIME_KEY, SettingsActivity.DEFAULT_HANGUP_TIME);
         int durationInSeconds = DateUtils.timeToSeconds(time);
         int offsetTime = Integer.parseInt(
-                preferences.getString(SettingsActivity.OFFSET_HANGUP_TIME, SettingsActivity.DEFAULT_OFFSET_HANGUP_TIME)
+                preferences.getString(SettingsActivity.OFFSET_HANGUP_TIME_KEY, SettingsActivity.DEFAULT_OFFSET_HANGUP_TIME)
         );
         int offsetInSeconds = DateUtils.calculateTimeOffsetInSeconds(offsetTime);
         int callDurationInSeconds = durationInSeconds + offsetInSeconds;

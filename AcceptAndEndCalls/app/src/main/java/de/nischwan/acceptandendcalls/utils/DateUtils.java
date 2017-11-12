@@ -84,6 +84,10 @@ public final class DateUtils {
      * @return +/- the passed time in seconds.
      */
     public static int calculateTimeOffsetInSeconds(int timeOffset) {
+        if (timeOffset <= 0) {
+            return 0;
+        }
+
         int maxOffsetInSeconds = timeOffset * 60;
         int offsetInSeconds = new Random().nextInt(maxOffsetInSeconds * 2) - maxOffsetInSeconds;
         if (Log.isDebugEnabled())
