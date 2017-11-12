@@ -21,6 +21,7 @@ import java.util.List;
 
 import de.nischwan.acceptandendcalls.R;
 import de.nischwan.acceptandendcalls.utils.DateUtils;
+import de.nischwan.acceptandendcalls.utils.NotificationUtils;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On

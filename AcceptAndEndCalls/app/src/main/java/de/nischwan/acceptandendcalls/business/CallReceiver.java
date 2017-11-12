@@ -16,6 +16,7 @@ import java.util.Random;
 import de.nischwan.acceptandendcalls.activities.SettingsActivity;
 import de.nischwan.acceptandendcalls.utils.DateUtils;
 import de.nischwan.acceptandendcalls.utils.Log;
+import de.nischwan.acceptandendcalls.utils.NotificationUtils;
 
 /**
  * @author Nico Schwanebeck
@@ -94,7 +95,10 @@ public class CallReceiver extends PhoneCallStateHandler {
                 preferences.getString(SettingsActivity.OFFSET_HANGUP_TIME, SettingsActivity.DEFAULT_OFFSET_HANGUP_TIME)
         );
         int offsetInSeconds = DateUtils.calculateTimeOffsetInSeconds(offsetTime);
-        startCallKiller(ctx, durationInSeconds + offsetInSeconds);
+        int callDurationInSeconds = durationInSeconds + offsetInSeconds;
+        Date hangupTime = new Date(System.currentTimeMillis() + (callDurationInSeconds * 1_000));
+        NotificationUtils.displayHangupTimeNotification(ctx, DateUtils.dateToString(hangupTime));
+        startCallKiller(ctx, callDurationInSeconds);
     }
 
     @Override
@@ -103,5 +107,6 @@ public class CallReceiver extends PhoneCallStateHandler {
         pendingIntent = PendingIntent.getBroadcast(ctx, 0, killCallIntent, 0);
         alarmManager = (AlarmManager) ctx.getSystemService(Context.ALARM_SERVICE);
         alarmManager.cancel(pendingIntent);
+        NotificationUtils.removeNotification(ctx);
     }
 }

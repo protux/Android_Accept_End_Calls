@@ -1,5 +1,6 @@
 package de.nischwan.acceptandendcalls.utils;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Random;
@@ -53,6 +54,11 @@ public final class DateUtils {
         }
 
         return minutes + ":" + seconds;
+    }
+
+    public static String dateToString(Date date) {
+        String[] time = SimpleDateFormat.getTimeInstance().format(date).split(":");
+        return time[0] + ":" + time[1];
     }
 
     /**

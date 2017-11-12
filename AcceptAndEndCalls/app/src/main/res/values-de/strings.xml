@@ -7,11 +7,14 @@
     <string name="cancel">Abbrechen</string>
     <string name="quit">Beenden</string>
 
+    <string name="notification_hangup_title">Aktiver Anruf</string>
+    <string name="notification_hangup_message">Anruf wird um %s unterbrochen.</string>
+
     <!-- Strings related to Settings -->
     <string name="pref_call_settings_header">Anrufeinstellungen</string>
     <string name="pref_hang_up_time">Nach .. Minuten auflegen (mm:ss)</string>
     <string name="pref_accept_calls">Anrufe annehmen</string>
-    <string name="pref_hang_up_offset">Max Abweichung beim Auflegen in Minuten</string>
+    <string name="pref_hang_up_offset">Max Auflegeabweichung in Min</string>
 
     <string name="default_hangup_time">50:15</string>
 </resources>
