@@ -28,7 +28,7 @@ public final class NotificationUtils {
             Notification.Builder builder = new Notification.Builder(context);
             builder.setContentTitle(title);
             builder.setContentText(message);
-            builder.setSmallIcon(android.R.drawable.ic_dialog_alert);
+            builder.setSmallIcon(android.R.drawable.ic_menu_call);
             builder.setOngoing(true);
             Notification notification = builder.getNotification();
             notificationManager.notify(R.string.notification_hangup_message, notification);
